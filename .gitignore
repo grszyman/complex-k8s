@@ -1,0 +1,7 @@
+/.idea/
+/api/node_modules/
+/api/package-lock.json
+/worker/node_modules/
+/worker/package-lock.json
+/client/node_modules/
+/client/package-lock.json

@@ -1,0 +1,78 @@
+@startuml
+'https://plantuml.com/deployment-diagram
+
+cloud Traffic as traffic
+
+rectangle Node {
+
+    artifact client-deployment <<Deployment>> as client_deployment {
+
+        portin 3000 as client_deployment_3000
+
+        artifact "client-pod-1" <<Pod>>
+        artifact "client-pod-2" <<Pod>>
+        artifact "client-pod-3" <<Pod>>
+    }
+    artifact client-cluster-ip-service <<Service>> as client_cluster_ip_service {
+    }
+    client_cluster_ip_service --> client_deployment_3000
+
+    artifact api-deployment <<Deployment>> as api_deployment {
+
+        portin 5000 as api_deployment_5000
+
+        artifact "api-pod-1" <<Pod>> as api_pod_1
+        artifact "api-pod-2" <<Pod>> as api_pod_2
+        artifact "api-pod-3" <<Pod>> as api_pod_3
+    }
+    artifact api-cluster-ip-service <<Service>> as api_cluster_ip_service {
+    }
+    api_cluster_ip_service --> api_deployment_5000
+
+    artifact postgres-deployment <<Deployment>> as postgres_deployment {
+
+        portin 5432 as postgres_deployment_5432
+
+        artifact "postgres-pod-1" <<Pod>> as postgres_pod_1
+    }
+    artifact postgres-cluster-ip-service <<Service>> as postgres_cluster_ip_service {
+    }
+    database "postgres-storage" <<database-persistent-volume-claim>> as postgres_storage
+    postgres_pod_1 --> postgres_storage
+
+    postgres_cluster_ip_service --> postgres_deployment_5432
+
+    api_pod_1 --> postgres_cluster_ip_service
+    api_pod_2 --> postgres_cluster_ip_service
+    api_pod_3 --> postgres_cluster_ip_service
+
+    artifact redis-deployment <<Deployment>> as redis_deployment {
+
+        portin 6379 as redis_deployment_6379
+
+        artifact "redis-pod-1" <<Pod>>
+    }
+    artifact redis-cluster-ip-service <<Service>> as redis_cluster_ip_service {
+    }
+    redis_cluster_ip_service --> redis_deployment_6379
+
+    api_pod_1 --> redis_cluster_ip_service
+    api_pod_2 --> redis_cluster_ip_service
+    api_pod_3 --> redis_cluster_ip_service
+
+    artifact worker-deployment <<Deployment>> as worker_deployment {
+
+        artifact "worker-pod-1" <<Pod>> as worker_pod_1
+    }
+
+    worker_pod_1 --> redis_cluster_ip_service
+
+    artifact ingress-service <<Ingress>> as ingress_service {
+    }
+
+    ingress_service --> client_cluster_ip_service
+    ingress_service --> api_cluster_ip_service
+}
+
+traffic --> ingress_service
+@enduml
