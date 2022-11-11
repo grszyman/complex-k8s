@@ -6,9 +6,7 @@
 
 # Deployment Diagram
 
-```plantuml:deployment.puml
-```
-![](./docs/images/deployment.svg)
+![](./docs/deployment.svg)
 
 # Kubernetes Dashboard
 
