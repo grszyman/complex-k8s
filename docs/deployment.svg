@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="955px" preserveAspectRatio="none" style="width:1293px;height:955px;" version="1.1" viewBox="0 0 1293 955" width="1293px" zoomAndPan="magnify"><defs><filter height="300%" id="f1w6j6oh75pfqd" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[2c0eb090db8b21e709837b6a1c4dc039]
+cluster Node--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="865" style="stroke:#000000;stroke-width:1.5;" width="1274" x="7" y="78.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="626" y="93.6899">Node</text><!--MD5=[29cd3a942c7b535b810bc277797245ab]
+cluster client_deployment--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="275" style="stroke:#000000;stroke-width:1.5;" width="361" x="146" y="351.6948"/><polygon fill="#FFFFFF" points="490,356.6948,490,370.6948,502,370.6948,502,362.6948,496,356.6948,490,356.6948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="496" x2="496" y1="356.6948" y2="362.6948"/><line style="stroke:#000000;stroke-width:1.5;" x1="502" x2="496" y1="362.6948" y2="362.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="93" x="280" y="366.6899">«Deployment»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="129" x="262" y="382.9868">client-deployment</text><!--MD5=[d8efce3139327df9b97f9b7945ea4c3a]
+cluster api_deployment--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="152" style="stroke:#000000;stroke-width:1.5;" width="568" x="515" y="351.6948"/><polygon fill="#FFFFFF" points="1066,356.6948,1066,370.6948,1078,370.6948,1078,362.6948,1072,356.6948,1066,356.6948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1072" x2="1072" y1="356.6948" y2="362.6948"/><line style="stroke:#000000;stroke-width:1.5;" x1="1078" x2="1072" y1="362.6948" y2="362.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="93" x="752.5" y="366.6899">«Deployment»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="111" x="743.5" y="382.9868">api-deployment</text><!--MD5=[5c3d57abe7f6706e063251945d7c3dd8]
+cluster postgres_deployment--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="145" style="stroke:#000000;stroke-width:1.5;" width="316" x="266" y="676.6948"/><polygon fill="#FFFFFF" points="565,681.6948,565,695.6948,577,695.6948,577,687.6948,571,681.6948,565,681.6948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="571" x2="571" y1="681.6948" y2="687.6948"/><line style="stroke:#000000;stroke-width:1.5;" x1="577" x2="571" y1="687.6948" y2="687.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="93" x="377.5" y="691.6899">«Deployment»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="151" x="348.5" y="707.9868">postgres-deployment</text><!--MD5=[4301c0e4160f7a4f529c6db5205b60b5]
+cluster redis_deployment--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="145" style="stroke:#000000;stroke-width:1.5;" width="240" x="645" y="676.6948"/><polygon fill="#FFFFFF" points="868,681.6948,868,695.6948,880,695.6948,880,687.6948,874,681.6948,868,681.6948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="874" x2="874" y1="681.6948" y2="687.6948"/><line style="stroke:#000000;stroke-width:1.5;" x1="880" x2="874" y1="687.6948" y2="687.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="93" x="718.5" y="691.6899">«Deployment»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="124" x="703" y="707.9868">redis-deployment</text><!--MD5=[deccfd75babb5258220d22603044e9e4]
+cluster worker_deployment--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="130" style="stroke:#000000;stroke-width:1.5;" width="158" x="1099" y="373.6948"/><polygon fill="#FFFFFF" points="1240,378.6948,1240,392.6948,1252,392.6948,1252,384.6948,1246,378.6948,1240,378.6948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1246" x2="1246" y1="378.6948" y2="384.6948"/><line style="stroke:#000000;stroke-width:1.5;" x1="1252" x2="1246" y1="384.6948" y2="384.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="93" x="1131.5" y="388.6899">«Deployment»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="138" x="1109" y="404.9868">worker-deployment</text><!--MD5=[8cb5863c346f61ed6248b5ff034fa0e1]
+entity postgres_storage--><path d="M224,875.6948 C224,865.6948 351,865.6948 351,865.6948 C351,865.6948 478,865.6948 478,875.6948 L478,917.2885 C478,927.2885 351,927.2885 351,927.2885 C351,927.2885 224,927.2885 224,917.2885 L224,875.6948 " fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" style="stroke:#000000;stroke-width:1.5;"/><path d="M224,875.6948 C224,885.6948 351,885.6948 351,885.6948 C351,885.6948 478,885.6948 478,875.6948 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="234" x="234" y="902.6899">«database-persistent-volume-claim»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="297.5" y="918.9868">postgres-storage</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="148" y="330.393">3000</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="158" y="345.6948"/><!--MD5=[e8d211984e446fe889b37afb0ee45003]
+entity client-pod-1--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="118" x="220" y="424.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="318" y="429.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="316" y="431.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="316" y="435.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="255" y="457.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="235" y="473.9868">client-pod-1</text><!--MD5=[10ed768d930380ac1e1290ffc2b51b58]
+entity client-pod-2--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="118" x="373" y="424.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="471" y="429.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="469" y="431.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="469" y="435.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="408" y="457.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="388" y="473.9868">client-pod-2</text><!--MD5=[f339b9681727e7073bf50fc60dca88cc]
+entity client-pod-3--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="118" x="220" y="547.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="318" y="552.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="316" y="554.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="316" y="558.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="255" y="580.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="235" y="596.9868">client-pod-3</text><!--MD5=[5838b54efffcb2bfea6379d1237625c7]
+entity client_cluster_ip_service--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="183" x="125.5" y="229.6948"/><polygon fill="#FFFFFF" points="291.5,234.6948,291.5,248.6948,303.5,248.6948,303.5,240.6948,297.5,234.6948,291.5,234.6948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="297.5" x2="297.5" y1="234.6948" y2="240.6948"/><line style="stroke:#000000;stroke-width:1.5;" x1="303.5" x2="297.5" y1="240.6948" y2="240.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="60" x="182" y="255.6899">«Service»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="153" x="135.5" y="271.9868">client-cluster-ip-service</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="750" y="330.393">5000</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="760" y="345.6948"/><!--MD5=[939fa4e3fb621525d5f495ce5cfb5bd0]
+entity api_pod_1--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="101" x="667.5" y="424.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="748.5" y="429.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="746.5" y="431.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="746.5" y="435.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="694" y="457.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="61" x="682.5" y="473.9868">api-pod-1</text><!--MD5=[a18af9c8df1167efa48e0600275e7932]
+entity api_pod_2--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="101" x="531.5" y="424.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="612.5" y="429.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="610.5" y="431.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="610.5" y="435.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="558" y="457.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="61" x="546.5" y="473.9868">api-pod-2</text><!--MD5=[decadfc6bf190a611b39ac9e3ad63220]
+entity api_pod_3--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="101" x="803.5" y="424.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="884.5" y="429.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="882.5" y="431.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="882.5" y="435.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="830" y="457.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="61" x="818.5" y="473.9868">api-pod-3</text><!--MD5=[a0f0e5daef749ecaf32288eab1a4ce7e]
+entity api_cluster_ip_service--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="166" x="395" y="229.6948"/><polygon fill="#FFFFFF" points="544,234.6948,544,248.6948,556,248.6948,556,240.6948,550,234.6948,544,234.6948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="550" x2="550" y1="234.6948" y2="240.6948"/><line style="stroke:#000000;stroke-width:1.5;" x1="556" x2="550" y1="240.6948" y2="240.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="60" x="443" y="255.6899">«Service»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="405" y="271.9868">api-cluster-ip-service</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="548" y="655.393">5432</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="558" y="670.6948"/><!--MD5=[1ed7e30d34847aec1f53f81d20908129]
+entity postgres_pod_1--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="137" x="282.5" y="742.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="399.5" y="747.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="397.5" y="749.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="397.5" y="753.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="327" y="775.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="297.5" y="791.9868">postgres-pod-1</text><!--MD5=[df4d45745fecf659a9496a56f17565f8]
+entity postgres_cluster_ip_service--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="202" x="521" y="551.1948"/><polygon fill="#FFFFFF" points="706,556.1948,706,570.1948,718,570.1948,718,562.1948,712,556.1948,706,556.1948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="712" x2="712" y1="556.1948" y2="562.1948"/><line style="stroke:#000000;stroke-width:1.5;" x1="718" x2="712" y1="562.1948" y2="562.1948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="60" x="587" y="577.1899">«Service»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="172" x="531" y="593.4868">postgres-cluster-ip-service</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="851" y="655.393">6379</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="861" y="670.6948"/><!--MD5=[76f51b82059f858875e98aef11e0ad1e]
+entity redis-pod-1--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="114" x="661" y="742.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="755" y="747.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="753" y="749.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="753" y="753.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="694" y="775.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="676" y="791.9868">redis-pod-1</text><!--MD5=[786464f58ff4bd14cddc992cf42fc0e4]
+entity redis_cluster_ip_service--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="179" x="764.5" y="551.1948"/><polygon fill="#FFFFFF" points="926.5,556.1948,926.5,570.1948,938.5,570.1948,938.5,562.1948,932.5,556.1948,926.5,556.1948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="932.5" x2="932.5" y1="556.1948" y2="562.1948"/><line style="stroke:#000000;stroke-width:1.5;" x1="938.5" x2="932.5" y1="562.1948" y2="562.1948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="60" x="819" y="577.1899">«Service»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="149" x="774.5" y="593.4868">redis-cluster-ip-service</text><!--MD5=[af2b97e4d1b1b181c0bbbf77bf7462d3]
+entity worker_pod_1--><rect fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="125" x="1115.5" y="424.6948"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1220.5" y="429.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1218.5" y="431.6948"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1218.5" y="435.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38" x="1154" y="457.6899">«Pod»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="1130.5" y="473.9868">worker-pod-1</text><!--MD5=[e2ab335dbb994a55ca0ac6362cea940f]
+entity ingress_service--><rect fill="#FFFFFF" filter="url(#f1w6j6oh75pfqd)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="127" x="283.5" y="113.6948"/><polygon fill="#FFFFFF" points="393.5,118.6948,393.5,132.6948,405.5,132.6948,405.5,124.6948,399.5,118.6948,393.5,118.6948" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="399.5" x2="399.5" y1="118.6948" y2="124.6948"/><line style="stroke:#000000;stroke-width:1.5;" x1="405.5" x2="399.5" y1="124.6948" y2="124.6948"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="61" x="311.5" y="139.6899">«Ingress»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="293.5" y="155.9868">ingress-service</text><!--MD5=[f85424c117d14d40f09ab424cc9bdca6]
+entity traffic--><path d="M322.0949,16.6973 C324.4559,10.5982 330.1645,9.3993 334.2344,14.9106 C337.8758,7.0158 342.116,6 348.0803,12.7081 C352.3929,7.6874 358.1148,8.2718 360.5918,14.712 C365.1555,9.362 370.4581,11.0864 373.0613,16.9015 C380.7778,19.0977 383.9459,26.0719 376.8015,31.9594 C382.7663,37.2716 382.5835,43.7033 374.605,46.9761 C372.0481,55.1242 366.9278,55.8879 360.7131,50.8214 C358.9015,57.875 353.7965,57.9686 349.1711,53.6862 C344.0942,58.8171 337.1217,58.6819 334.8737,50.6202 C330.0728,56.694 324.4492,53.4917 322.4313,47.7015 C313.9312,45.1747 313.2998,39.0275 318.5049,32.872 C311.8642,26.987 314.4472,19.4109 322.0949,16.6973 " fill="#FEFECE" filter="url(#f1w6j6oh75pfqd)" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="38" x="328" y="35.6899">Traffic</text><!--MD5=[01058637f64e4c09c91d8ffc4946e66f]
+link client_cluster_ip_service to client_deployment_3000--><path d="M201.38,285.8048 C190.71,304.3348 177.18,327.8148 169.68,340.8448 " fill="none" id="client_cluster_ip_service-to-client_deployment_3000" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="167.03,345.4448,174.9867,339.6404,169.5245,341.1115,168.0535,335.6492,167.03,345.4448" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ba9ccfcc9b3296070ac1c76711c19a0f]
+link api_cluster_ip_service to api_deployment_5000--><path d="M561.3,285.3048 C630.71,307.4748 723.16,337.0048 754.82,347.1248 " fill="none" id="api_cluster_ip_service-to-api_deployment_5000" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="759.69,348.6748,752.3216,342.1397,754.9242,347.1623,749.9017,349.7649,759.69,348.6748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ee1a7f13fb92ffda1d727c2713cdfe39]
+link postgres_pod_1 to postgres_storage--><path d="M351,805.9148 C351,822.4748 351,842.9748 351,860.2148 " fill="none" id="postgres_pod_1-to-postgres_storage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="351,865.4448,355,856.4448,351,860.4448,347,856.4448,351,865.4448" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f62ada3e89905a04382c5a347bb28fbc]
+link postgres_cluster_ip_service to postgres_deployment_5432--><path d="M605.53,607.3048 C593.6,626.9548 578.17,652.3648 569.88,666.0148 " fill="none" id="postgres_cluster_ip_service-to-postgres_deployment_5432" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="567.17,670.4748,575.2663,664.8668,569.7697,666.2038,568.4327,660.7072,567.17,670.4748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[be1e78d366dff1799042489f36295c31]
+link api_pod_1 to postgres_cluster_ip_service--><path d="M693.78,487.7248 C679.42,505.8248 661.27,528.7048 646.81,546.9248 " fill="none" id="api_pod_1-to-postgres_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="643.6,550.9748,652.3255,546.4069,646.7061,547.0566,646.0564,541.4372,643.6,550.9748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d3439575d05c3597e8bd34a925889556]
+link api_pod_2 to postgres_cluster_ip_service--><path d="M592.09,487.7248 C597.97,505.5148 605.38,527.9348 611.36,546.0048 " fill="none" id="api_pod_2-to-postgres_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="613,550.9748,613.9664,541.1734,611.4274,546.2285,606.3724,543.6895,613,550.9748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[addfc1de7a3c8abf808be8383341bc91]
+link api_pod_3 to postgres_cluster_ip_service--><path d="M819.77,487.8148 C809.37,496.2248 797.61,504.8848 786,511.6948 C761.43,526.1048 733.14,538.8048 707.05,549.1348 " fill="none" id="api_pod_3-to-postgres_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="702.2,551.0348,712.0393,551.4688,706.8541,549.2074,709.1155,544.0222,702.2,551.0348" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ad905cabd843ca22743fdb314ee166ad]
+link redis_cluster_ip_service to redis_deployment_6379--><path d="M857.69,607.3048 C860.32,626.6048 863.7,651.4748 865.58,665.2848 " fill="none" id="redis_cluster_ip_service-to-redis_deployment_6379" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="866.29,670.4748,869.0458,661.0193,865.6189,665.52,861.1182,662.0931,866.29,670.4748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6b5d4edb5e6089420f97c456c444da12]
+link api_pod_1 to redis_cluster_ip_service--><path d="M752.32,487.7248 C772.91,506.0548 799.02,529.2748 819.62,547.6148 " fill="none" id="api_pod_1-to-redis_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="823.4,550.9748,819.3308,542.0059,819.663,547.653,814.0159,547.9851,823.4,550.9748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4cd2a8593e01b92f96a8b0652f3ded0d]
+link api_pod_2 to redis_cluster_ip_service--><path d="M615.24,487.7748 C625.79,496.3748 637.89,505.1548 650,511.6948 C669.68,522.3348 715.81,537.6248 759.23,550.8648 " fill="none" id="api_pod_2-to-redis_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="764.24,552.3848,756.8007,545.9305,759.458,550.9244,754.4641,553.5817,764.24,552.3848" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4bbabb75f9def2f832f69f3a69de19a6]
+link api_pod_3 to redis_cluster_ip_service--><path d="M854,487.7248 C854,505.3648 854,527.5548 854,545.5348 " fill="none" id="api_pod_3-to-redis_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="854,550.9748,858,541.9748,854,545.9748,850,541.9748,854,550.9748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a98a277ae50952f7de4d40b3ad52d0ea]
+link worker_pod_1 to redis_cluster_ip_service--><path d="M1129.84,487.7848 C1115.17,496.2848 1098.75,505.0048 1083,511.6948 C1040.07,529.9348 990.57,544.9948 948.6,556.1548 " fill="none" id="worker_pod_1-to-redis_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="943.52,557.4948,953.2419,559.0712,948.3552,556.2216,951.2048,551.3349,943.52,557.4948" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2c6b3f59995bbfb373ff9f54db9b79aa]
+link ingress_service to client_cluster_ip_service--><path d="M316.19,169.7148 C296.9,186.6248 272,208.4648 251.98,226.0248 " fill="none" id="ingress_service-to-client_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="248.04,229.4748,257.4417,226.5409,251.7967,226.1752,252.1624,220.5302,248.04,229.4748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[73c2aa8eb0fa4d1c28cc297ba31754ab]
+link ingress_service to api_cluster_ip_service--><path d="M378.05,169.7148 C397.48,186.6248 422.57,208.4648 442.76,226.0248 " fill="none" id="ingress_service-to-api_cluster_ip_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="446.72,229.4748,442.5616,220.5468,442.95,226.1904,437.3065,226.5788,446.72,229.4748" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3c9260ce5664442c46f56b198d995bdd]
+link traffic to ingress_service--><path d="M347,53.7548 C347,69.4248 347,90.7248 347,108.3148 " fill="none" id="traffic-to-ingress_service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="347,113.6548,351,104.6548,347,108.6548,343,104.6548,347,113.6548" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7999cd8fa8cb30258727e4cd9fd6643f]
+link client-pod-1 to client-pod-2--><!--MD5=[e268053057d62859082a0faaf896ae82]
+link client-pod-1 to client-pod-3--><!--MD5=[c48e73ca68868fdd24477e7d7b7bab85]
+@startuml
+'https://plantuml.com/deployment-diagram
+
+cloud Traffic as traffic
+
+rectangle Node {
+
+    artifact client-deployment <<Deployment>> as client_deployment {
+
+        portin 3000 as client_deployment_3000
+
+        component "client-pod-1" <<Pod>>
+        component "client-pod-2" <<Pod>>
+        component "client-pod-3" <<Pod>>
+    }
+    artifact client-cluster-ip-service <<Service>> as client_cluster_ip_service {
+    }
+    client_cluster_ip_service - -> client_deployment_3000
+
+    artifact api-deployment <<Deployment>> as api_deployment {
+
+        portin 5000 as api_deployment_5000
+
+        component "api-pod-1" <<Pod>> as api_pod_1
+        component "api-pod-2" <<Pod>> as api_pod_2
+        component "api-pod-3" <<Pod>> as api_pod_3
+    }
+    artifact api-cluster-ip-service <<Service>> as api_cluster_ip_service {
+    }
+    api_cluster_ip_service - -> api_deployment_5000
+
+    artifact postgres-deployment <<Deployment>> as postgres_deployment {
+
+        portin 5432 as postgres_deployment_5432
+
+        component "postgres-pod-1" <<Pod>> as postgres_pod_1
+    }
+    artifact postgres-cluster-ip-service <<Service>> as postgres_cluster_ip_service {
+    }
+    database "postgres-storage" <<database-persistent-volume-claim>> as postgres_storage
+    postgres_pod_1 - -> postgres_storage
+
+    postgres_cluster_ip_service - -> postgres_deployment_5432
+
+    api_pod_1 - -> postgres_cluster_ip_service
+    api_pod_2 - -> postgres_cluster_ip_service
+    api_pod_3 - -> postgres_cluster_ip_service
+
+    artifact redis-deployment <<Deployment>> as redis_deployment {
+
+        portin 6379 as redis_deployment_6379
+
+        component "redis-pod-1" <<Pod>>
+    }
+    artifact redis-cluster-ip-service <<Service>> as redis_cluster_ip_service {
+    }
+    redis_cluster_ip_service - -> redis_deployment_6379
+
+    api_pod_1 - -> redis_cluster_ip_service
+    api_pod_2 - -> redis_cluster_ip_service
+    api_pod_3 - -> redis_cluster_ip_service
+
+    artifact worker-deployment <<Deployment>> as worker_deployment {
+
+        component "worker-pod-1" <<Pod>> as worker_pod_1
+    }
+
+    worker_pod_1 - -> redis_cluster_ip_service
+
+    artifact ingress-service <<Ingress>> as ingress_service {
+    }
+
+    ingress_service - -> client_cluster_ip_service
+    ingress_service - -> api_cluster_ip_service
+}
+
+traffic - -> ingress_service
+@enduml
+
+@startuml
+
+cloud Traffic as traffic
+
+rectangle Node {
+
+    artifact client-deployment <<Deployment>> as client_deployment {
+
+        portin 3000 as client_deployment_3000
+
+        component "client-pod-1" <<Pod>>
+        component "client-pod-2" <<Pod>>
+        component "client-pod-3" <<Pod>>
+    }
+    artifact client-cluster-ip-service <<Service>> as client_cluster_ip_service {
+    }
+    client_cluster_ip_service - -> client_deployment_3000
+
+    artifact api-deployment <<Deployment>> as api_deployment {
+
+        portin 5000 as api_deployment_5000
+
+        component "api-pod-1" <<Pod>> as api_pod_1
+        component "api-pod-2" <<Pod>> as api_pod_2
+        component "api-pod-3" <<Pod>> as api_pod_3
+    }
+    artifact api-cluster-ip-service <<Service>> as api_cluster_ip_service {
+    }
+    api_cluster_ip_service - -> api_deployment_5000
+
+    artifact postgres-deployment <<Deployment>> as postgres_deployment {
+
+        portin 5432 as postgres_deployment_5432
+
+        component "postgres-pod-1" <<Pod>> as postgres_pod_1
+    }
+    artifact postgres-cluster-ip-service <<Service>> as postgres_cluster_ip_service {
+    }
+    database "postgres-storage" <<database-persistent-volume-claim>> as postgres_storage
+    postgres_pod_1 - -> postgres_storage
+
+    postgres_cluster_ip_service - -> postgres_deployment_5432
+
+    api_pod_1 - -> postgres_cluster_ip_service
+    api_pod_2 - -> postgres_cluster_ip_service
+    api_pod_3 - -> postgres_cluster_ip_service
+
+    artifact redis-deployment <<Deployment>> as redis_deployment {
+
+        portin 6379 as redis_deployment_6379
+
+        component "redis-pod-1" <<Pod>>
+    }
+    artifact redis-cluster-ip-service <<Service>> as redis_cluster_ip_service {
+    }
+    redis_cluster_ip_service - -> redis_deployment_6379
+
+    api_pod_1 - -> redis_cluster_ip_service
+    api_pod_2 - -> redis_cluster_ip_service
+    api_pod_3 - -> redis_cluster_ip_service
+
+    artifact worker-deployment <<Deployment>> as worker_deployment {
+
+        component "worker-pod-1" <<Pod>> as worker_pod_1
+    }
+
+    worker_pod_1 - -> redis_cluster_ip_service
+
+    artifact ingress-service <<Ingress>> as ingress_service {
+    }
+
+    ingress_service - -> client_cluster_ip_service
+    ingress_service - -> api_cluster_ip_service
+}
+
+traffic - -> ingress_service
+@enduml
+
+PlantUML version 1.2020.23(Sun Dec 13 19:14:58 GMT 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
