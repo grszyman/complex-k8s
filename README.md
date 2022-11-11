@@ -28,6 +28,12 @@ kubectl apply -f k8s-dashboard
 ```shell
 kubectl -n kubernetes-dashboard create token admin-user
 ```
+
+For macOS you can use:
+```shell
+kubectl -n kubernetes-dashboard create token admin-user | pbcopy
+```
+
 # Secrets
 
 We don't want to have secrets in configuration files, so we will create these in an imperative way.
