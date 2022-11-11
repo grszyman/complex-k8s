@@ -1,3 +1,7 @@
+# Docker and Kubernetes: The Complete Guide
+
+The project was created based on a course [Docker and Kubernetes: The Complete Guide](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide)
+
 # Table Of Contents
 
 1. [Kubernetes Dashboard](#kubernetes-dashboard)
