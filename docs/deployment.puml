@@ -75,5 +75,4 @@ rectangle Node {
 }
 
 traffic --> ingress_service
-
 @enduml
