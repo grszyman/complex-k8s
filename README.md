@@ -4,6 +4,12 @@
 2. [Secrets](#secrets)
 3. [Ingress Nginx](#ingress-nginx)
 
+# Deployment Diagram
+
+```plantuml:docs/deployment.puml
+```
+![](./docs/images/deployment.svg)
+
 # Kubernetes Dashboard
 
 ## Configuration
