@@ -6,7 +6,7 @@
 
 # Deployment Diagram
 
-```plantuml:docs/deployment.puml
+```plantuml:deployment.puml
 ```
 ![](./docs/images/deployment.svg)
 
