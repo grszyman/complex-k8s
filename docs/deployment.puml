@@ -9,9 +9,9 @@ rectangle Node {
 
         portin 3000 as client_deployment_3000
 
-        artifact "client-pod-1" <<Pod>>
-        artifact "client-pod-2" <<Pod>>
-        artifact "client-pod-3" <<Pod>>
+        component "client-pod-1" <<Pod>>
+        component "client-pod-2" <<Pod>>
+        component "client-pod-3" <<Pod>>
     }
     artifact client-cluster-ip-service <<Service>> as client_cluster_ip_service {
     }
@@ -21,9 +21,9 @@ rectangle Node {
 
         portin 5000 as api_deployment_5000
 
-        artifact "api-pod-1" <<Pod>> as api_pod_1
-        artifact "api-pod-2" <<Pod>> as api_pod_2
-        artifact "api-pod-3" <<Pod>> as api_pod_3
+        component "api-pod-1" <<Pod>> as api_pod_1
+        component "api-pod-2" <<Pod>> as api_pod_2
+        component "api-pod-3" <<Pod>> as api_pod_3
     }
     artifact api-cluster-ip-service <<Service>> as api_cluster_ip_service {
     }
@@ -33,7 +33,7 @@ rectangle Node {
 
         portin 5432 as postgres_deployment_5432
 
-        artifact "postgres-pod-1" <<Pod>> as postgres_pod_1
+        component "postgres-pod-1" <<Pod>> as postgres_pod_1
     }
     artifact postgres-cluster-ip-service <<Service>> as postgres_cluster_ip_service {
     }
@@ -50,7 +50,7 @@ rectangle Node {
 
         portin 6379 as redis_deployment_6379
 
-        artifact "redis-pod-1" <<Pod>>
+        component "redis-pod-1" <<Pod>>
     }
     artifact redis-cluster-ip-service <<Service>> as redis_cluster_ip_service {
     }
@@ -62,7 +62,7 @@ rectangle Node {
 
     artifact worker-deployment <<Deployment>> as worker_deployment {
 
-        artifact "worker-pod-1" <<Pod>> as worker_pod_1
+        component "worker-pod-1" <<Pod>> as worker_pod_1
     }
 
     worker_pod_1 --> redis_cluster_ip_service
