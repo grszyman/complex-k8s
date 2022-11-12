@@ -24,7 +24,9 @@ jobs:
         id: vars
         run: |-
           tag=${{ github.ref }}
+          echo $tag
           echo "version=${tag#'releases/'}" >> $GITHUB_OUTPUT
+          echo $GITHUB_OUTPUT
 
       # Setup gcloud CLI
       - uses: google-github-actions/setup-gcloud@94337306dda8180d967a56932ceb4ddcf01edae7
