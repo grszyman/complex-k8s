@@ -74,7 +74,7 @@ jobs:
           ./kustomize edit set image grszyman/complex-api=grszyman/complex-api:${{ steps.vars.outputs.short_sha }}
           ./kustomize edit set image grszyman/complex-client=grszyman/complex-client:${{ steps.vars.outputs.short_sha }}
           ./kustomize edit set image grszyman/complex-worker=grszyman/complex-worker:${{ steps.vars.outputs.short_sha }}
-          ./kustomize build k8s | kubectl apply -f -
+          ./kustomize build . | kubectl apply -f -
           kubectl rollout status deployment/api-deployment
           kubectl rollout status deployment/client-deployment
           kubectl rollout status deployment/worker-deployment
