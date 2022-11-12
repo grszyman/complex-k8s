@@ -51,12 +51,6 @@ jobs:
       - name: Push client
         run: docker push -a grszyman/complex-client
 
-      - name: Build nginx
-        run: docker build -t grszyman/complex-nginx -t grszyman/complex-nginx:${{ steps.vars.outputs.short_sha }} ./nginx
-
-      - name: Push nginx
-        run: docker push -a grszyman/complex-nginx
-
       - name: Build api
         run: docker build -t grszyman/complex-api -t grszyman/complex-api:${{ steps.vars.outputs.short_sha }} ./api
 
