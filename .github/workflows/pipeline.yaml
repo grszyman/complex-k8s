@@ -40,12 +40,6 @@ jobs:
         run:
           echo "short_sha=$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_OUTPUT
 
-      # TODO: https://docs.github.com/en/repositories/releasing-projects-on-github/automation-for-release-forms-with-query-parameters
-      - name: Tag a released version
-        run: |-
-          git tag releases/v1.0.0-${{ steps.vars.outputs.short_sha }}
-          git push origin releases/v1.0.0-${{ steps.vars.outputs.short_sha }}
-
       - name: Build client
         run: docker build -t grszyman/complex-client -t grszyman/complex-client:${{ steps.vars.outputs.short_sha }} ./client
 
@@ -63,6 +57,12 @@ jobs:
 
       - name: Push worker
         run: docker push -a grszyman/complex-worker
+
+      # TODO: https://docs.github.com/en/repositories/releasing-projects-on-github/automation-for-release-forms-with-query-parameters
+      - name: Tag a released version
+        run: |-
+          git tag releases/v1.0.0-${{ steps.vars.outputs.short_sha }}
+          git push origin releases/v1.0.0-${{ steps.vars.outputs.short_sha }}        
 
     outputs:
       short_sha: ${{ steps.vars.outputs.short_sha }}
