@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - k8s/api-cluster-ip-service.yaml
+  - k8s/api-deployment.yaml
+  - k8s/client-cluster-ip-service.yaml
+  - k8s/client-deployment.yaml
+  - k8s/database-persistent-volume-claim.yaml
+  - k8s/ingress-service.yaml
+  - k8s/postgres-cluster-ip-service.yaml
+  - k8s/postgres-deployment.yaml
+  - k8s/redis-cluster-ip-service.yaml
+  - k8s/redis-deployment.yaml
+  - k8s/worker-deployment.yaml
