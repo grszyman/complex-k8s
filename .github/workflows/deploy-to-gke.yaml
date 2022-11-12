@@ -61,9 +61,9 @@ jobs:
       # ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
       - name: Deploy
         run: |-
-          ./kustomize edit set image grszyman/complex-api=grszyman/complex-api:${{ steps.vars.outputs.short_sha }}
-          ./kustomize edit set image grszyman/complex-client=grszyman/complex-client:${{ steps.vars.outputs.short_sha }}
-          ./kustomize edit set image grszyman/complex-worker=grszyman/complex-worker:${{ steps.vars.outputs.short_sha }}
+          ./kustomize edit set image grszyman/complex-api=grszyman/complex-api:${{ steps.vars.outputs.version }}
+          ./kustomize edit set image grszyman/complex-client=grszyman/complex-client:${{ steps.vars.outputs.version }}
+          ./kustomize edit set image grszyman/complex-worker=grszyman/complex-worker:${{ steps.vars.outputs.version }}
           ./kustomize build . | kubectl apply -f -
           kubectl rollout status deployment/api-deployment
           kubectl rollout status deployment/client-deployment
