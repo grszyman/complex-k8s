@@ -35,6 +35,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
+      # without REPOSITORY_TOKEN, pushing a tag wouldn't trigger other workflows
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
@@ -43,22 +44,22 @@ jobs:
       - name: Set short git commit SHA
         id: vars
         run:
-          echo "short_sha=$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_OUTPUT
+          echo "version=v1.0.0-$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_OUTPUT
 
       - name: Build client
-        run: docker build -t grszyman/complex-client -t grszyman/complex-client:${{ steps.vars.outputs.short_sha }} ./client
+        run: docker build -t grszyman/complex-client -t grszyman/complex-client:${{ steps.vars.outputs.version }} ./client
 
       - name: Push client
         run: docker push -a grszyman/complex-client
 
       - name: Build api
-        run: docker build -t grszyman/complex-api -t grszyman/complex-api:${{ steps.vars.outputs.short_sha }} ./api
+        run: docker build -t grszyman/complex-api -t grszyman/complex-api:${{ steps.vars.outputs.version }} ./api
 
       - name: Push api
         run: docker push -a grszyman/complex-api
 
       - name: Build worker
-        run: docker build -t grszyman/complex-worker -t grszyman/complex-worker:${{ steps.vars.outputs.short_sha }} ./worker
+        run: docker build -t grszyman/complex-worker -t grszyman/complex-worker:${{ steps.vars.outputs.version }} ./worker
 
       - name: Push worker
         run: docker push -a grszyman/complex-worker
@@ -66,37 +67,8 @@ jobs:
       # TODO: https://docs.github.com/en/repositories/releasing-projects-on-github/automation-for-release-forms-with-query-parameters
       - name: Tag a released version
         run: |-
-          git tag releases/v1.0.0-${{ steps.vars.outputs.short_sha }}
-          git push origin releases/v1.0.0-${{ steps.vars.outputs.short_sha }}        
+          git tag releases/${{ steps.vars.outputs.version }}
+          git push origin releases/${{ steps.vars.outputs.version }}        
 
     outputs:
-      short_sha: ${{ steps.vars.outputs.short_sha }}
-
-#  deploy:
-#    runs-on: ubuntu-latest
-#    needs: publish
-#    if: github.ref == 'refs/heads/main'
-#    steps:
-#      - name: Login to Docker Hub
-#        uses: docker/login-action@v2
-#        with:
-#          username: ${{ secrets.DOCKER_USERNAME }}
-#          password: ${{ secrets.DOCKER_TOKEN }}
-#
-#      - name: Checkout repository
-#        uses: actions/checkout@v2
-
-#      - name: Generate deployment package
-#        run: zip deploy.zip docker-compose.yml
-#
-#      - name: Deploy to EBS
-#        uses: einaregilsson/beanstalk-deploy@v18
-#        with:
-#          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
-#          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-#          application_name: test-2
-#          environment_name: Test2-env
-#          existing_bucket_name: elasticbeanstalk-us-east-2-840579016403
-#          region: us-east-2
-#          version_label: ${{ needs.publish.outputs.short_sha }}
-#          deployment_package: deploy.zip
+      version: ${{ steps.vars.outputs.version }}
