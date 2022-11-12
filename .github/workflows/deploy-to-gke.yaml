@@ -33,6 +33,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set short git commit SHA
+        id: vars
+        run:
+          echo "short_sha=$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_OUTPUT
+
       # Setup gcloud CLI
       - uses: google-github-actions/setup-gcloud@94337306dda8180d967a56932ceb4ddcf01edae7
         with:
@@ -67,9 +72,9 @@ jobs:
       - name: Deploy
         run: |-
           cd k8s
-          ./kustomize edit set image grszyman/complex-api=grszyman/complex-api:$GITHUB_SHA
-          ./kustomize edit set image grszyman/complex-client=grszyman/complex-client:$GITHUB_SHA
-          ./kustomize edit set image grszyman/complex-worker=grszyman/complex-worker:$GITHUB_SHA
+          ./kustomize edit set image grszyman/complex-api=grszyman/complex-api:${{ steps.vars.outputs.short_sha }}
+          ./kustomize edit set image grszyman/complex-client=grszyman/complex-client:${{ steps.vars.outputs.short_sha }}
+          ./kustomize edit set image grszyman/complex-worker=grszyman/complex-worker:${{ steps.vars.outputs.short_sha }}
           cd ..
           ./kustomize build k8s | kubectl apply -f -
           kubectl rollout status deployment/api-deployment
