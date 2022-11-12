@@ -7,6 +7,7 @@ The project was created based on a course [Docker and Kubernetes: The Complete G
 1. [Kubernetes Dashboard](#kubernetes-dashboard)
 2. [Secrets](#secrets)
 3. [Ingress Nginx](#ingress-nginx)
+4. [Google Cloud](#google-cloud)
 
 # Deployment Diagram
 
@@ -61,6 +62,65 @@ helm upgrade --install ingress-nginx ingress-nginx \
 
 # Google Cloud
 
+* [Deploying to Google Kubernetes Engine](https://docs.github.com/en/actions/deployment/deploying-to-your-cloud-provider/deploying-to-google-kubernetes-engine)
+
+## Google Cloud CLI
+
+* [Install the Google Cloud CLI](https://cloud.google.com/sdk/docs/install-sdk)
+
+```shell
+brew install google-cloud-sdk
+```
+
 ## Pricing Calculator
 
 * [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator)
+
+## Configuration
+
+```shell
+gcloud iam service-accounts create github-deployer
+```
+```shell
+gcloud iam service-accounts list
+```
+
+```shell
+
+GKE_PROJECT='...' && \
+SA_EMAIL='...' && \
+
+gcloud projects add-iam-policy-binding $GKE_PROJECT \
+	--member=serviceAccount:$SA_EMAIL \
+	--role=roles/container.admin && \
+gcloud projects add-iam-policy-binding $GKE_PROJECT \
+	--member=serviceAccount:$SA_EMAIL \
+	--role=roles/storage.admin && \
+gcloud projects add-iam-policy-binding $GKE_PROJECT \
+	--member=serviceAccount:$SA_EMAIL \
+	--role=roles/container.clusterViewer
+```
+
+```shell
+gcloud iam service-accounts keys create key.json --iam-account=$SA_EMAIL
+```
+
+```shell
+kubectl create secret generic complex-pg-credentials \
+ --from-literal GKE_PROJECT=complex-k8s-368316 \
+ --from-file GKE_SA_KEY=
+```
+
+```shell
+gcloud config set compute/zone us-central1-a && \
+gcloud container clusters get-credentials complex-cluster
+```
+
+[ingress-nginx](https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx#configuration) - Ingress controller
+for Kubernetes using NGINX as a reverse proxy and load balancer
+
+```shell
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
+helm repo update && \
+helm install ingress-nginx/ingress-nginx --generate-name
+```
