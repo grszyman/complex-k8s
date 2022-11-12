@@ -71,11 +71,9 @@ jobs:
       # ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
       - name: Deploy
         run: |-
-          cd k8s
           ./kustomize edit set image grszyman/complex-api=grszyman/complex-api:${{ steps.vars.outputs.short_sha }}
           ./kustomize edit set image grszyman/complex-client=grszyman/complex-client:${{ steps.vars.outputs.short_sha }}
           ./kustomize edit set image grszyman/complex-worker=grszyman/complex-worker:${{ steps.vars.outputs.short_sha }}
-          cd ..
           ./kustomize build k8s | kubectl apply -f -
           kubectl rollout status deployment/api-deployment
           kubectl rollout status deployment/client-deployment
