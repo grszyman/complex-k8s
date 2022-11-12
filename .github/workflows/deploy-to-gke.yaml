@@ -22,8 +22,9 @@ jobs:
 
       - name: Set short git commit SHA
         id: vars
-        run:
-          echo "version=${${{ github.ref }#'releases/'}}" >> $GITHUB_OUTPUT
+        run: |-
+          tag=${{ github.ref }}
+          echo "version=${tag#'releases/'}" >> $GITHUB_OUTPUT
 
       # Setup gcloud CLI
       - uses: google-github-actions/setup-gcloud@94337306dda8180d967a56932ceb4ddcf01edae7
