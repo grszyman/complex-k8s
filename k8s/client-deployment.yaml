@@ -19,3 +19,9 @@ spec:
           image: grszyman/complex-client
           ports:
             - containerPort: 3000
+          env:
+            - name: APP_VERSION
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_VERSION
+                  name: application-properties

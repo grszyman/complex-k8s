@@ -58,9 +58,9 @@ jobs:
           chmod u+x ./kustomize
 
       # Deploy the Docker image to the GKE cluster
-      # ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
       - name: Deploy
         run: |-
+          echo "version=${{ steps.vars.outputs.version }}" >> application.properties
           ./kustomize edit set image grszyman/complex-api=grszyman/complex-api:${{ steps.vars.outputs.version }}
           ./kustomize edit set image grszyman/complex-client=grszyman/complex-client:${{ steps.vars.outputs.version }}
           ./kustomize edit set image grszyman/complex-worker=grszyman/complex-worker:${{ steps.vars.outputs.version }}

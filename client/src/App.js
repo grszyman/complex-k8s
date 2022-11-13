@@ -1,3 +1,5 @@
+const keys = require('./keys')
+
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -11,7 +13,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>FibCalculator v1.0.0</p>
+          <p>FibCalculator {keys.appVersion}</p>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>

@@ -1,6 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+configMapGenerator:
+  - name: application-properties
+    options:
+      disableNameSuffixHash: true
+    files:
+      - application.properties
+
 resources:
   - k8s/api-cluster-ip-service.yaml
   - k8s/api-deployment.yaml
