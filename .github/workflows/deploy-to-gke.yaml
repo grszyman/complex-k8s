@@ -8,7 +8,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: complex-cluster
-  GKE_ZONE: us-central1-a
+  GKE_ZONE: us-central1-c
 
 jobs:
   setup-build-publish-deploy:
@@ -58,7 +58,6 @@ jobs:
           chmod u+x ./kustomize
 
       # Deploy the Docker image to the GKE cluster
-      # ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
       - name: Deploy
         run: |-
           ./kustomize edit set image grszyman/complex-api=grszyman/complex-api:${{ steps.vars.outputs.version }}

@@ -1,8 +1,12 @@
 FROM node:16-alpine AS builder
+
+ARG version='UNDEFINED'
+
 WORKDIR '/app'
 COPY ./package.json ./
 RUN npm install
 COPY . .
+RUN sed -i 's/APP_VERSION/'"${version}"'/g' ./src/keys.js
 RUN npm run build
 
 FROM nginx:latest

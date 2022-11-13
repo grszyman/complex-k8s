@@ -5,9 +5,8 @@ The project was created based on a course [Docker and Kubernetes: The Complete G
 # Table Of Contents
 
 1. [Kubernetes Dashboard](#kubernetes-dashboard)
-2. [Secrets](#secrets)
-3. [Ingress Nginx](#ingress-nginx)
-4. [Google Cloud](#google-cloud)
+2. [Ingress Nginx](#ingress-nginx)
+3. [Google Cloud](#google-cloud)
 
 # Deployment Diagram
 
@@ -33,16 +32,6 @@ kubectl -n kubernetes-dashboard create token admin-user
 For macOS you can use:
 ```shell
 kubectl -n kubernetes-dashboard create token admin-user | pbcopy
-```
-
-# Secrets
-
-We don't want to have secrets in configuration files, so we will create these in an imperative way.
-
-```shell
-kubectl create secret generic complex-pg-credentials \
- --from-literal PG_USER=..... \
- --from-literal PG_PASSWORD=.....
 ```
 
 # Ingress Nginx
@@ -106,7 +95,7 @@ gcloud iam service-accounts keys create key.json --iam-account=$SA_EMAIL
 ```
 
 ```shell
-gcloud config set compute/zone us-central1-a && \
+gcloud config set compute/zone us-central1-c && \
 gcloud container clusters get-credentials complex-cluster
 ```
 
@@ -152,4 +141,12 @@ helm install \
   --namespace cert-manager \
   --create-namespace \
   --set installCRDs=true
+```
+
+## Secret Generator
+
+```shell
+helm repo add mittwald https://helm.mittwald.de && \
+helm repo update && \
+helm upgrade --install kubernetes-secret-generator mittwald/kubernetes-secret-generator --namespace utils --create-namespace
 ```

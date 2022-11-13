@@ -46,10 +46,10 @@ jobs:
       - name: Set short git commit SHA
         id: vars
         run:
-          echo "version=v1.0.0-$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_OUTPUT
+          echo "version=v1.0.1-$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_OUTPUT
 
       - name: Build client
-        run: docker build -t grszyman/complex-client -t grszyman/complex-client:${{ steps.vars.outputs.version }} ./client
+        run: docker build -t grszyman/complex-client -t grszyman/complex-client:${{ steps.vars.outputs.version }} --build-arg version=${{ steps.vars.outputs.version }} ./client
 
       - name: Push client
         run: docker push -a grszyman/complex-client
