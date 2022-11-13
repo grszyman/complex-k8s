@@ -110,20 +110,45 @@ gcloud config set compute/zone us-central1-a && \
 gcloud container clusters get-credentials complex-cluster
 ```
 
-[ingress-nginx](https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx#configuration) - Ingress controller
-for Kubernetes using NGINX as a reverse proxy and load balancer
+## Static IP and Domain Name
 
-[Configure domain names with static IP addresses](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip)
-
-```shell
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
-helm repo update && \
-helm install ingress-nginx/ingress-nginx --generate-name --set controller.service.loadBalancerIP=<YOUR_EXTERNAL_IP>
-```
-
-## Static IP and Domain Name-
+> Ingress Nginx doesn't support global IPs
 
 ```shell
 gcloud compute addresses create complex-ip --global && \
 gcloud compute addresses describe complex-ip --global
+```
+
+```shell
+gcloud compute addresses create complex-regional-ip --region us-central1
+gcloud compute addresses describe complex-regional-ip --region us-central1
+```
+
+## Ingress
+
+* [NGINX Ingress or GKE Ingress?](https://medium.com/@glen.yu/nginx-ingress-or-gke-ingress-d87dd9db504c)
+* [ingress-nginx](https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx#configuration) - Ingress controller
+for Kubernetes using NGINX as a reverse proxy and load balancer
+* [Configure domain names with static IP addresses](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip)
+
+### Ingress Nginx
+
+```shell
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
+helm repo update && \
+helm install ingress-nginx/ingress-nginx --generate-name --set controller.service.loadBalancerIP=<YOUR_REGIONAL_STATIC_IP>
+```
+
+## Cert Manager
+
+* [Installing with Helm](https://cert-manager.io/docs/installation/helm/#installing-with-helm)
+
+```shell
+helm repo add jetstack https://charts.jetstack.io && \
+helm repo update && \
+helm install \
+  cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --create-namespace \
+  --set installCRDs=true
 ```
