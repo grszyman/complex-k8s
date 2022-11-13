@@ -8,6 +8,7 @@ resources:
   - k8s/client-deployment.yaml
   - k8s/database-persistent-volume-claim.yaml
   - k8s/ingress-service.yaml
+  - k8s/letsenctrypt-prod.yaml
   - k8s/postgres-cluster-ip-service.yaml
   - k8s/postgres-deployment.yaml
   - k8s/redis-cluster-ip-service.yaml
