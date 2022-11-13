@@ -1,7 +1,8 @@
 name: Pipeline
 on:
   push:
-    tags-ignore: 'releases/v*'
+    tags-ignore: 
+      - 'releases/v*'
 
 jobs:
 
