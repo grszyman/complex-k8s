@@ -7,7 +7,6 @@ metadata:
     component: ingress
   annotations:
     kubernetes.io/ingress.class: 'nginx'
-    kubernetes.io/ingress.global-static-ip-name: 'complex-ip'
     nginx.ingress.kubernetes.io/use-regex: 'true'
     nginx.ingress.kubernetes.io/rewrite-target: /$1
 
