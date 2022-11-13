@@ -118,10 +118,10 @@ for Kubernetes using NGINX as a reverse proxy and load balancer
 ```shell
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
 helm repo update && \
-helm install ingress-nginx/ingress-nginx --generate-name
+helm install ingress-nginx/ingress-nginx --generate-name --set controller.service.loadBalancerIP=<YOUR_EXTERNAL_IP>
 ```
 
-## Static IP and Domain Name
+## Static IP and Domain Name-
 
 ```shell
 gcloud compute addresses create complex-ip --global && \
