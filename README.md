@@ -118,3 +118,10 @@ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
 helm repo update && \
 helm install ingress-nginx/ingress-nginx --generate-name
 ```
+
+## Static IP and Domain Name
+
+```shell
+gcloud compute addresses create complex-ip --global && \
+gcloud compute addresses describe complex-ip --global
+```
