@@ -106,12 +106,6 @@ gcloud iam service-accounts keys create key.json --iam-account=$SA_EMAIL
 ```
 
 ```shell
-kubectl create secret generic complex-pg-credentials \
- --from-literal GKE_PROJECT=complex-k8s-368316 \
- --from-file GKE_SA_KEY=
-```
-
-```shell
 gcloud config set compute/zone us-central1-a && \
 gcloud container clusters get-credentials complex-cluster
 ```
