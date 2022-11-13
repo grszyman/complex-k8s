@@ -113,6 +113,8 @@ gcloud container clusters get-credentials complex-cluster
 [ingress-nginx](https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx#configuration) - Ingress controller
 for Kubernetes using NGINX as a reverse proxy and load balancer
 
+[Configure domain names with static IP addresses](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip)
+
 ```shell
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
 helm repo update && \
