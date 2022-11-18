@@ -109,43 +109,30 @@ gcloud compute addresses describe complex-ip --global
 ```
 
 ```shell
-gcloud compute addresses create complex-regional-ip --region us-central1
+gcloud compute addresses create complex-regional-ip --region us-central1 && \
 gcloud compute addresses describe complex-regional-ip --region us-central1
 ```
 
-## Ingress
+## Setup Helm Charts
 
 * [NGINX Ingress or GKE Ingress?](https://medium.com/@glen.yu/nginx-ingress-or-gke-ingress-d87dd9db504c)
 * [ingress-nginx](https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx#configuration) - Ingress controller
 for Kubernetes using NGINX as a reverse proxy and load balancer
 * [Configure domain names with static IP addresses](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip)
-
-### Ingress Nginx
+* [Installing with Helm](https://cert-manager.io/docs/installation/helm/#installing-with-helm)
 
 ```shell
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
 helm repo update && \
 helm install ingress-nginx ingress-nginx/ingress-nginx \
-  --set controller.service.loadBalancerIP=<YOUR_REGIONAL_STATIC_IP>
-```
-
-## Cert Manager
-
-* [Installing with Helm](https://cert-manager.io/docs/installation/helm/#installing-with-helm)
-
-```shell
+  --set controller.service.loadBalancerIP=`gcloud compute addresses describe complex-regional-ip --region us-central1 --format="value(address)"` && \
 helm repo add jetstack https://charts.jetstack.io && \
 helm repo update && \
 helm install \
   cert-manager jetstack/cert-manager \
   --namespace cert-manager \
   --create-namespace \
-  --set installCRDs=true
-```
-
-## Secret Generator
-
-```shell
+  --set installCRDs=true && \
 helm repo add mittwald https://helm.mittwald.de && \
 helm repo update && \
 helm upgrade --install kubernetes-secret-generator mittwald/kubernetes-secret-generator --namespace utils --create-namespace
