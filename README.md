@@ -123,17 +123,15 @@ for Kubernetes using NGINX as a reverse proxy and load balancer
 
 ```shell
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
+helm repo add jetstack https://charts.jetstack.io && \
+helm repo add mittwald https://helm.mittwald.de && \
 helm repo update && \
 helm install ingress-nginx ingress-nginx/ingress-nginx \
   --set controller.service.loadBalancerIP=`gcloud compute addresses describe complex-regional-ip --region us-central1 --format="value(address)"` && \
-helm repo add jetstack https://charts.jetstack.io && \
-helm repo update && \
 helm install \
   cert-manager jetstack/cert-manager \
   --namespace cert-manager \
   --create-namespace \
   --set installCRDs=true && \
-helm repo add mittwald https://helm.mittwald.de && \
-helm repo update && \
 helm upgrade --install kubernetes-secret-generator mittwald/kubernetes-secret-generator --namespace utils --create-namespace
 ```

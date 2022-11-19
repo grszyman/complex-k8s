@@ -1,6 +1,8 @@
 name: Pipeline
 on:
   push:
+    paths:
+      - "!**.md"
     branches: 
       - '**'
     tags-ignore: 
