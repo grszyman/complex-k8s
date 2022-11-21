@@ -133,5 +133,69 @@ helm install \
   --namespace cert-manager \
   --create-namespace \
   --set installCRDs=true && \
-helm upgrade --install kubernetes-secret-generator mittwald/kubernetes-secret-generator --namespace utils --create-namespace
+helm install kubernetes-secret-generator mittwald/kubernetes-secret-generator --namespace utils --create-namespace
+```
+
+# AWS
+
+```shell
+brew tap weaveworks/tap && \
+brew install weaveworks/tap/eksctl && \
+brew install awscli
+```
+
+```shell
+aws configure
+```
+
+t2.micro was too small
+
+```shell
+eksctl create cluster \
+--name complex-cluster \
+--region eu-central-1 \
+--nodegroup-name linux-nodes \
+--node-type t2.small \
+--nodes 3
+```
+
+```shell
+eksctl utils associate-iam-oidc-provider --cluster my-cluster --approve
+```
+
+* [Creating an IAM OIDC provider for your cluster](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html)
+* [How do I use persistent storage in Amazon EKS?](https://aws.amazon.com/premiumsupport/knowledge-center/eks-persistent-storage/)
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "arn:aws:iam::YOUR_AWS_ACCOUNT_ID:oidc-provider/oidc.eks.YOUR_AWS_REGION.amazonaws.com/id/<XXXXXXXXXX45D83924220DC4815XXXXX>"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "oidc.eks.YOUR_AWS_REGION.amazonaws.com/id/<XXXXXXXXXX45D83924220DC4815XXXXX>:sub": "system:serviceaccount:kube-system:ebs-csi-controller-sa"
+        }
+      }
+    }
+  ]
+}
+```
+
+```shell
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
+helm repo add jetstack https://charts.jetstack.io && \
+helm repo add mittwald https://helm.mittwald.de && \
+helm repo update && \
+helm install ingress-nginx ingress-nginx/ingress-nginx && \
+helm install \
+  cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --create-namespace \
+  --set installCRDs=true && \
+helm install kubernetes-secret-generator mittwald/kubernetes-secret-generator --namespace utils --create-namespace
 ```
