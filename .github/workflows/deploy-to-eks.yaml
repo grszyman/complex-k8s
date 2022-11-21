@@ -2,9 +2,9 @@ name: Deploy to EKS
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'releases/v*'
+#  push:
+#    tags:
+#      - 'releases/v*'
 
 env:
   CLUSTER: complex-cluster
