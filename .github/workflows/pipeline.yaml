@@ -1,9 +1,7 @@
 name: Pipeline
 on:
   push:
-    paths:
-      - "!**.md"
-    branches: 
+    branches:
       - '**'
     tags-ignore: 
       - 'releases/v*'

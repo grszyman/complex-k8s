@@ -2,14 +2,15 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 
 metadata:
-  name: letsencrypt-prod
+  name: letsencrypt-issuer
 
 spec:
   acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
+#    server: https://acme-v02.api.letsencrypt.org/directory
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
     email: admin@szymsoft.pl
     privateKeySecretRef:
-      name: letsencrypt-prod
+      name: letsencrypt-issuer
     solvers:
       - http01:
           ingress:
