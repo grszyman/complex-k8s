@@ -138,6 +138,8 @@ helm install kubernetes-secret-generator mittwald/kubernetes-secret-generator --
 
 # AWS
 
+## Setup CI tools
+
 ```shell
 brew tap weaveworks/tap && \
 brew install weaveworks/tap/eksctl && \
@@ -148,7 +150,9 @@ brew install awscli
 aws configure
 ```
 
-t2.micro was too small
+## Create cluster
+
+> t2.micro was too small
 
 ```shell
 eksctl create cluster \
@@ -159,32 +163,19 @@ eksctl create cluster \
 --nodes 3
 ```
 
-```shell
-eksctl utils associate-iam-oidc-provider --cluster my-cluster --approve
-```
+## Create IAM OIDC provider for your cluster
 
 * [Creating an IAM OIDC provider for your cluster](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html)
+
+```shell
+eksctl utils associate-iam-oidc-provider --cluster complex-cluster --approve
+```
+
+## Setup EKS Persistent Storage
+
 * [How do I use persistent storage in Amazon EKS?](https://aws.amazon.com/premiumsupport/knowledge-center/eks-persistent-storage/)
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::YOUR_AWS_ACCOUNT_ID:oidc-provider/oidc.eks.YOUR_AWS_REGION.amazonaws.com/id/<XXXXXXXXXX45D83924220DC4815XXXXX>"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "oidc.eks.YOUR_AWS_REGION.amazonaws.com/id/<XXXXXXXXXX45D83924220DC4815XXXXX>:sub": "system:serviceaccount:kube-system:ebs-csi-controller-sa"
-        }
-      }
-    }
-  ]
-}
-```
+## Setup Helm Charts
 
 ```shell
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
@@ -198,4 +189,10 @@ helm install \
   --create-namespace \
   --set installCRDs=true && \
 helm install kubernetes-secret-generator mittwald/kubernetes-secret-generator --namespace utils --create-namespace
+```
+
+## Clean up
+
+```shell
+eksctl delete cluster --region=eu-central-1 --name=complex-cluster
 ```
